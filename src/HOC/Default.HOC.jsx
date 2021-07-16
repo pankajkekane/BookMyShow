@@ -1,7 +1,13 @@
 import React from 'react'
+import { Route } from 'react-router';
 
-const DefaultHOC = () => {
-    return <div></div>;
+//layout import
+import DefaultLayout from '../layouts/Default.layout';
+
+const DefaultHOC = ({component, ...props }) => {
+    return <>
+    <Route {...props} />
+    </>;
 };
 
 export default DefaultHOC;
