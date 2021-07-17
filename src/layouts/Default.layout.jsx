@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
+
+//components
+import Navbar from '../components/navbar.component';
+
+
 
 const DefaultLayout = () => {
-    return(
-        <div>
-            <h1 className="text-xl">Default Layout</h1>
-        </div>
-    );
+    return <>
+    <Navbar />
+  </>;
 };
   
 export default DefaultLayout;

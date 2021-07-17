@@ -6,6 +6,7 @@ import DefaultLayout from '../layouts/Default.layout';
 
 const DefaultHOC = ({component, ...props }) => {
     return <>
+    <DefaultLayout/>
     <Route {...props} />
     </>;
 };
