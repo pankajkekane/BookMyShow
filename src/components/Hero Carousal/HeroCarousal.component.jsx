@@ -18,8 +18,8 @@ const HeroCarousal = () => {
          slidesToShow: 2, 
          infinite: true, 
          slidesToScroll: 1, 
-         nextArrow:<NextArrow/>, 
-         prevarrow:<PrevArrow/>,
+         nextArrow:<NextArrow />, 
+         prevArrow:<PrevArrow />,
         };
 
     const settings = {
@@ -29,8 +29,8 @@ const HeroCarousal = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        nextArrow:<NextArrow/>,
-        prevarrow:<PrevArrow/>,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
       };
 
       const images = ["https://in.bmscdn.com/promotions/cms/creatives/1626504090321_misbehaviour_1280x500_17jul_ios.jpg",
