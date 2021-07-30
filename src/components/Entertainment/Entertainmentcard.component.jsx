@@ -8,13 +8,13 @@ const EntertainmentCard = (props) => {
         <img src={props.src} alt="entertainmentimage" className="w-full h-full rounded-xl"/>
     </div>
     </>
-    )
+    );
 };
 
 
 const EntertainmentCardSlider = () => {
 
-    const Entertainmentimage=[
+    const EntertainmentImage=[
 "https://in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-MTg1KyBFdmVudHM%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300/workshops-collection-202007231330.png",
 "https://in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-MTUrIEV2ZW50cw%3D%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300/fitness-collection-2020081150.png",
 "https://in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-NzArIEV2ZW50cw%3D%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300/kids-collection-202007220710.png",
@@ -26,7 +26,7 @@ const EntertainmentCardSlider = () => {
 "https://in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-MiBFdmVudHM%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300/interactive-games-collection-202012041129.png",
 "https://in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-MjArIEV2ZW50cw%3D%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300/art-and-crafts-collection-202007220710.png",
 "https://in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-MTUrIEV2ZW50cw%3D%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300/theatre-shows-collection-202012041128.png",
-"https://in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-OCBFdmVudHM%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300/adventure-collection-202010140844.png"
+"https://in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-OCBFdmVudHM%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300/adventure-collection-202010140844.png",
 ];
 
 const settings = {
@@ -34,8 +34,9 @@ const settings = {
     autoplay:false,
     slidesToShow:4,
     slidesToScroll:4,
-    initialSlide:0,
-    responsive:[{
+    initialSlide:1,
+    responsive:[
+        {
         breakpoints: 1024,
         settings:{
             slidesToShow:3,
@@ -46,7 +47,7 @@ const settings = {
 
     {
         breakpoints: 600,
-        settings:{
+        settings: {
             slidesToShow:2,
             slidesToScroll:1,
             initialSlide:1,
@@ -55,7 +56,7 @@ const settings = {
 
     {
         breakpoints: 480,
-        settings:{
+        settings: {
             slidesToShow:2,
             slidesToScroll:1,
         
@@ -66,16 +67,18 @@ const settings = {
 };
     return(
         <>
+       
         <Slider {...settings}>
 
             {
-               Entertainmentimage.map((Image) => 
-               (<EntertainmentCard src={Image} />)
+               EntertainmentImage.map((image) => 
+               (<EntertainmentCard src={image} />)
             )
-            };
+            }
         </Slider>
+        
         </>
-    )
+    );
 };
 
 export default EntertainmentCardSlider;
