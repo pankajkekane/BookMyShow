@@ -5,6 +5,7 @@ import { Route } from "react-router-dom";
 
 //HOC
 import DefaultHOC from "./HOC/Default.HOC";
+import MovieHOC from "./HOC/Movie.HOC";
 
 
 //component
@@ -20,7 +21,7 @@ function App() {
   return(
   <>
  <DefaultHOC path="/" exact component={HomePage} /> 
- <DefaultHOC path="/" exact component={Movie} /> 
+ <MovieHOC path="/Movie/:id" exact component={Movie} /> 
 
 
  <Route/>
